@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Composer
+/vendor/
+composer.lock
+
+# Downloaded files
+/downloads/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace 
