@@ -448,7 +448,12 @@ if (php_sapi_name() === 'cli') {
             break;
 
         default:
-            echo "Unknown command: $command\n";
+            echo "Usage:\n";
+            echo "  List directory: php download_s3.php list [prefix] [--max-keys=N]\n";
+            echo "  Download file: php download_s3.php download <s3_key> [local_path]\n";
+            echo "  Download directory: php download_s3.php download-dir <s3_prefix> [local_path] [--prefix=file_prefix] [--postfix=file_postfix]\n";
+            echo "  Delete file: php download_s3.php delete <s3_key>\n";
+            echo "  Delete directory: php download_s3.php delete-dir <s3_prefix>\n";
             exit(1);
     }
 } else {
